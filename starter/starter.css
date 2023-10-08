@@ -1,0 +1,83 @@
+/* * {
+    background-color: cyan;
+} */
+
+body {
+    background-color: #f1faee;
+}
+
+button {
+    font-size: 30px;
+    background-color: #a8dadc;
+}
+
+h1,
+h2 {
+    color: #1d3557;
+}
+
+#signup {
+    background-color: #1d3557;
+    color: #f1faee;
+}
+
+span {
+    color: #457b9d
+}
+
+.tag {
+    background-color: #e63946;
+    color: #f1faee;
+    font-size: 16px;
+}
+
+.post a {
+    color: #a8dadc;
+    text-decoration: none;
+    font-size: bold;
+}
+
+footer a {
+    color: #c1121f;
+}
+
+h2+button {
+    font-size: 20px;
+}
+
+footer>a {
+    color: #2a9d8f;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.post button:active {
+    background-color: #588157;
+}
+
+.post:nth-of-type(2n) {
+    background-color: #a3b18a;
+}
+
+h2::first-letter {
+    font-size: 50px;
+}
+
+p::first-line {
+    color: purple;
+}
+
+p::selection {
+    background-color: #e9c46a;
+}
+
+.post button:hover {
+    background-color: #780000;
+    color: white;
+}
+
+button:hover {
+    background-color: olive;
+}
