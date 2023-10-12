@@ -1,0 +1,63 @@
+html {
+    font-size: 20px;
+}
+
+#percentage {
+    background-color: #d6ccc2;
+    width: 800px;
+    height: 800px;
+}
+
+#percentage div {
+    background-color: #f5ebe0;
+    width: 50%;
+    height: 50%;
+}
+
+#em h2 {
+    font-size: 2em;
+    margin: 1em;
+}
+
+#em h3 {
+    font-size: 1.5em;
+}
+
+#em p {
+    font-size: 1em;
+}
+
+#em {
+    font-size: 20px;
+}
+
+#em button {
+    font-size: 10em;
+    padding: 0.2em;
+    border-radius: 0.5em;
+    background-color: #588157;
+}
+
+#em ul {
+    font-size: 1.5em;
+}
+
+
+#rem h2 {
+    font-size: 3rem;
+}
+
+#rem h3 {
+    font-size: 2rem;
+}
+
+#rem ul {
+    font-size: 1.5rem;
+}
+
+#rem button {
+    font-size: 10rem;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+    background-color: #588157;
+}
