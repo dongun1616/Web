@@ -1,0 +1,13 @@
+section {
+    width: 80%;
+    height: 800px;
+    background-size: cover;
+    background-position: bottom;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzIUy0_Wd0xOaadphB4cMGXGcc8yUtWgBRQA&usqp=CAU);
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 100px;
+    color: white;
+}
