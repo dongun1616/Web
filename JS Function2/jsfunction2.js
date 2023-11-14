@@ -3,6 +3,10 @@ function collectEggs() {
     console.log(totalEggs);
 }
 
+const colltEg = () => {
+    let eggs = prompt("how many eggs")
+    console.log(eggs);
+}
 
 
 // 기본적인 함수
@@ -26,7 +30,8 @@ function rollDie() {
     console.log(roll);
 }
 
-callTwice(rollDie);
+
+// callTwice(rollDie);
 
 //반환 함수
 function makeMysteryFunc() {
@@ -40,6 +45,16 @@ function makeMysteryFunc() {
         return function () {
             alert("have a virus!!")
         }
+    }
+}
+
+const mystery = () => {
+    const rand = Math.random();
+    if (rand > 0.5) {
+        return () => console.log("im function")
+    }
+    else {
+        return () => alert("have a virus!!")
     }
 }
 

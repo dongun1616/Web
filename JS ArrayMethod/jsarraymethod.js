@@ -41,13 +41,11 @@ const movies = [
 
 //map 메서드
 
-// const double = numbers.map(function (num) {
-//     return num * 2;
-// })
+const double = numbers.map((num) => num * 2
+)
 
-// const favMovie = movies.map(function (movie) {
-//     return movie.title.toUpperCase();
-// })
+const favMovie = movies.map((movie) => movie.title.toUpperCase()
+)
 
 
 //화살표 함수

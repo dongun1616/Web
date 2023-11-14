@@ -8,11 +8,21 @@ function greet(firstName, lastName) {
     console.log(`firstName is ${firstName} ${lastName[0]}!`);
 }
 
+const grr = (fName, lName) => console.log(`firstName is ${fName} ${lName[0]}!`)
+
 function rant(message) {
     console.log(`${message}`.toUpperCase());
 }
 
+const msg = (msgs) => console.log(`${msgs}`.toUpperCase())
+
 function repeat(str, num) {
+    for (let i = 0; i < num; i++) {
+        console.log(str);
+    }
+}
+
+const rpeat = (str, num) => {
     for (let i = 0; i < num; i++) {
         console.log(str);
     }
@@ -25,6 +35,12 @@ function add(x, y) {
     return x + y;
 }
 
+const adds = (x, y) => {
+    if (typeof x !== 'number' || typeof y !== 'number') {
+        return false;
+    }
+    return x + y;
+}
 // 마지막 요소 연습
 
 function lastElement(array) {
@@ -38,7 +54,12 @@ function lastElement(array) {
 //대문자 반환 연습
 
 function capitalize(str) {
-    let resultStr = str[0].toUpperCase() + str.slice(1);;
+    let resultStr = str[0].toUpperCase() + str.slice(1);
+    return resultStr;
+}
+
+const capital = (str) => {
+    let resultStr = str[0].toUpperCase() + str.slice(1);
     return resultStr;
 }
 
