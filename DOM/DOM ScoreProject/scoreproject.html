@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Score Project</title>
+    <link rel="stylesheet" href="scoreproject.css">
+</head>
+
+<body>
+    <h1>Score Project</h1>
+    <section id="container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2BiiIsmzmkGG3NwBKqKxEkbjAuWnEfsuHpw&usqp=CAU"
+            alt="pingpong">
+        <p id="title">Ping Pong Score Keeper</p>
+        <h2 id="score"><span id="player1Score">0</span> to <span id="player2Score">0</span></h2>
+        <p>Use the button below to keep score.</p>
+        <label for="goalScore">Playing To</label>
+        <select name="goal" id="goalScore">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+        </select>
+        <div id="buttonContainer">
+            <button id="player1">+1 Player One</button>
+            <button id="player2">+1 Player Two</button>
+            <button id="reset">Reset</button>
+        </div>
+    </section>
+
+    <script src="scoreproject.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+#container {
+    width: 30%;
+    height: 50%;
+    margin: 0 auto;
+    border: 0.5px solid gray;
+    display: flex;
+    flex-direction: column;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+#goalScore {
+    width: 20%;
+}
+
+#title {
+    margin: 0;
+    border: 0.5px solid gray;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    margin: 0;
+}
+
+#player1 {
+    background: #73ba9b;
+    color: white;
+    border: 0.5px solid #73ba9b;
+}
+
+#player1:hover {
+    background: #84a98c;
+}
+
+#player2 {
+    background: skyblue;
+    color: white;
+    border: 0.5px solid skyblue;
+}
+
+#player2:hover {
+    background: #00b4d8;
+}
+
+#reset {
+    background: red;
+    color: white;
+    border: 0.5px solid red;
+}
+
+#reset:hover {
+    background: #c1121f;
+}
+
+.win {
+    color: green;
+}
+
+.lose {
+    color: red;
+}
