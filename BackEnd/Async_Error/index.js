@@ -4,6 +4,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override')
 const AppError = require('./AppError'); //AppError.js 가져오기
+const flash = require('connect-flash');
 
 const Product = require('./models/product');
 
@@ -21,6 +22,7 @@ app.set('views', path.join(__dirname, 'views'))
 
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
+app.use(flash());
 
 function wrapAsync(fn) {
     return function (req, res, next) {
