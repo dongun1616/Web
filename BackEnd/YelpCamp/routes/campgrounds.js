@@ -3,12 +3,17 @@ const router = express.Router();
 const campgrounds = require('../controllers/campgrounds')
 const wrapAsync = require('../utils/wrapAsync');
 const { isLoggedIn, isAuthor, validateCampground } = require('../middleware')
+const multer = require('multer');
+const { storage } = require('../cloudinary');
+const upload = multer({ storage });
 
 const Campground = require('../models/campground')
 
 router.route('/')
     .get(wrapAsync(campgrounds.index))  //index 라우트
-    .post(isLoggedIn, validateCampground, wrapAsync(campgrounds.createCampground)) //create 라우트
+    .post(isLoggedIn, upload.array('image'), validateCampground, wrapAsync(campgrounds.createCampground)) //create 라우트
+
+
 
 router.get('/new', isLoggedIn, campgrounds.renderNewForm);  //new 폼
 

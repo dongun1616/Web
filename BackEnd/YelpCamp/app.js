@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== "production") { // 환경변수
+    require('dotenv').config();
+}
+
 const express = require('express');
 const app = express();
 const path = require('path');
