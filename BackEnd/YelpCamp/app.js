@@ -1,3 +1,4 @@
+// 2024.03.08 최신
 if (process.env.NODE_ENV !== "production") { // 환경변수
     require('dotenv').config();
 }
