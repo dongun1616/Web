@@ -16,6 +16,8 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/user');
 
+const mongoSanitize = require('express-mongo-sanitize');
+
 const userRoutes = require('./routes/users');
 const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
@@ -35,21 +37,26 @@ app.set('views', path.join(__dirname, 'views'))
 
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
-
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(mongoSanitize({
+    replaceWith: '_'
+}))
 
 const sessionConfig = {
+    name: "session",
     secret: 'thisissecret',
     resave: false,
     saveUninitialized: true,
     cookie: {
         httponly: true,
+        //secure: true,  //배포할시 사용해야 한다. HTTP를 통해서만 로그인 가능
         expires: Date.now() + 1000 * 60 * 60 * 24 * 7, //만료기간
         maxAge: 1000 * 60 * 60 * 24 * 7
     }
 }
 app.use(session(sessionConfig))
 app.use(flash());
+
 
 app.use(passport.initialize())
 app.use(passport.session())
