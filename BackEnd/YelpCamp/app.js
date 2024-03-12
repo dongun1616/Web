@@ -57,7 +57,6 @@ const sessionConfig = {
 app.use(session(sessionConfig))
 app.use(flash());
 
-
 app.use(passport.initialize())
 app.use(passport.session())
 passport.use(new LocalStrategy(User.authenticate())) // 다운로드하고 요청한 LocalStrategy를 사용한다.
