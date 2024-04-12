@@ -1,8 +1,19 @@
 import { useState } from "react";
 
-export default function ShoppingListForm({ addItem }) {
+export default function ValidatedShoppingListForm({ addItem }) {
     const [formData, setFormData] = useState({ product: "", quantity: 0 })
+    const [productIsValid, setProductIsValid] = useState(false); //유효성검사를 위한 상태
+    const validate = (product) => {  //유효성 검사 함수
+        if (product.length === 0) {
+            setProductIsValid(false)
+        } else {
+            setProductIsValid(true)
+        }
+    }
     const handleChange = (evt) => {
+        if (evt.target.name === "product") {
+            validate(evt.target.value);
+        }
         setFormData((currData) => {
             return {
                 ...currData,
@@ -12,8 +23,10 @@ export default function ShoppingListForm({ addItem }) {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        addItem(formData)
-        setFormData({ product: "", quantity: 0 })
+        if (productIsValid) {
+            addItem(formData)
+            setFormData({ product: "", quantity: 0 })
+        }
     }
     return (
         <form onSubmit={handleSubmit}>
@@ -26,6 +39,9 @@ export default function ShoppingListForm({ addItem }) {
                 onChange={handleChange}
                 value={formData.product}
             />
+            {!productIsValid && (
+                <p style={{ color: "red" }}>Product name cannot be empty</p>
+            )}
             <label htmlFor="quantity">Quantity</label>
             <input
                 type="number"

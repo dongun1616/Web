@@ -1,14 +1,17 @@
 import UsernameForm from './UsernameForm';
 import SingupForm from './SignupForm';
 import BetterSingupForm from './BetterSignupForm';
-import ShoppingListForm from './ShoppingListForm';
+import ShoppingList from './ShoppingList';
+import FormDemo from './FormDemo';
 import './App.css'
 
 function App() {
 
   return (
     <>
-      <ShoppingListForm />
+      {/* <ShoppingList /> */}
+      <h1>Validated Form</h1>
+      <FormDemo />
     </>
   )
 }
